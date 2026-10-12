@@ -495,12 +495,6 @@ Comprueba la validez de la clave API, los permisos de la cuenta, la disponibilid
 ---
 
 
-## 📄 Licencia
-
-
-
-Consulta los términos de uso del repositorio antes de reutilizar o distribuir el código. Si deseas permitir formalmente su reutilización por terceros, considera añadir un archivo `LICENSE` con la licencia que elijas.
-
 
 
 ## 👤 Autor

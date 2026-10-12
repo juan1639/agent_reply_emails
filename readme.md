@@ -1,4 +1,4 @@
-\# 📧 AI Email Reply Agent
+# 📧 AI Email Reply Agent
 
 
 
@@ -14,47 +14,47 @@ Por seguridad, el agente puede guardar las respuestas como borradores en Gmail p
 
 
 
-\## ✨ Características
+## ✨ Características
 
 
 
-\- \*\*Filtrado de remitentes:\*\* solo procesa correos procedentes de las direcciones incluidas en `direcciones\_email.txt`.
+- **Filtrado de remitentes:** solo procesa correos procedentes de las direcciones incluidas en `direcciones\_email.txt`.
 
-\- \*\*Redacción mediante IA:\*\* utiliza OpenAI y LangChain para generar respuestas concisas, amables y profesionales.
+- **Redacción mediante IA:** utiliza OpenAI y LangChain para generar respuestas concisas, amables y profesionales.
 
-\- \*\*Dos modos de funcionamiento:\*\* guardar respuestas como borradores o enviarlas automáticamente.
+- **Dos modos de funcionamiento:** guardar respuestas como borradores o enviarlas automáticamente.
 
-\- \*\*Protección frente a respuestas inapropiadas:\*\* identifica mensajes que requieren revisión humana, como correos relacionados con cuestiones legales, económicas, reclamaciones o situaciones urgentes.
+- **Protección frente a respuestas inapropiadas:** identifica mensajes que requieren revisión humana, como correos relacionados con cuestiones legales, económicas, reclamaciones o situaciones urgentes.
 
-\- \*\*Control de correos procesados:\*\* registra los identificadores de los mensajes para evitar procesarlos repetidamente.
+- **Control de correos procesados:** registra los identificadores de los mensajes para evitar procesarlos repetidamente.
 
-\- \*\*Conservación del estado de lectura:\*\* consulta los mensajes sin marcarlos como leídos durante la búsqueda.
+- **Conservación del estado de lectura:** consulta los mensajes sin marcarlos como leídos durante la búsqueda.
 
-\- \*\*Filtrado de correos automáticos:\*\* evita responder a listas de distribución, newsletters y determinados remitentes automáticos.
+- **Filtrado de correos automáticos:** evita responder a listas de distribución, newsletters y determinados remitentes automáticos.
 
-\- \*\*Configuración mediante variables de entorno:\*\* permite mantener las credenciales fuera del código fuente.
-
-
-
-\## 🛠️ Tecnologías utilizadas
+- **Configuración mediante variables de entorno:** permite mantener las credenciales fuera del código fuente.
 
 
 
-\- Python 3.10 o superior.
-
-\- \[LangChain](https://www.langchain.com/).
-
-\- \[OpenAI API](https://platform.openai.com/).
-
-\- \[Pydantic](https://docs.pydantic.dev/).
-
-\- `python-dotenv` para cargar variables de entorno.
-
-\- IMAP y SMTP para recibir y gestionar correos de Gmail.
+## 🛠️ Tecnologías utilizadas
 
 
 
-\## 📋 Requisitos previos
+- Python 3.10 o superior.
+
+- [LangChain](https://www.langchain.com/).
+
+- [OpenAI API](https://platform.openai.com/).
+
+- [Pydantic](https://docs.pydantic.dev/).
+
+- `python-dotenv` para cargar variables de entorno.
+
+- IMAP y SMTP para recibir y gestionar correos de Gmail.
+
+
+
+## 📋 Requisitos previos
 
 
 
@@ -62,27 +62,27 @@ Antes de ejecutar el proyecto necesitarás:
 
 
 
-1\. Tener Python instalado.
+1. Tener Python instalado.
 
-2\. Disponer de una cuenta de Gmail.
+2. Disponer de una cuenta de Gmail.
 
-3\. Configurar una contraseña de aplicación de Google para acceder al correo mediante IMAP y SMTP.
+3. Configurar una contraseña de aplicación de Google para acceder al correo mediante IMAP y SMTP.
 
-4\. Disponer de una clave API de OpenAI con acceso y facturación configurados según el uso previsto.
+4. Disponer de una clave API de OpenAI con acceso y facturación configurados según el uso previsto.
 
-5\. Tener conexión a Internet.
-
-
-
-\*\*Importante:\*\* una suscripción a ChatGPT no incluye necesariamente crédito para utilizar la API de OpenAI. El consumo de la API se factura de forma independiente.
+5. Tener conexión a Internet.
 
 
 
-\## 🚀 Instalación
+**Importante:** una suscripción a ChatGPT no incluye necesariamente crédito para utilizar la API de OpenAI. El consumo de la API se factura de forma independiente.
 
 
 
-\### 1. Clonar el repositorio
+## 🚀 Instalación
+
+
+
+### 1. Clonar el repositorio
 
 
 
@@ -100,7 +100,7 @@ cd agent\_reply\_emails
 
 
 
-\### 2. Crear un entorno virtual
+### 2. Crear un entorno virtual
 
 
 
@@ -136,7 +136,7 @@ source .venv/bin/activate
 
 
 
-\### 3. Instalar las dependencias
+### 3. Instalar las dependencias
 
 
 
@@ -154,7 +154,7 @@ pip install langchain-openai python-dotenv pydantic
 
 
 
-\## ⚙️ Configuración
+## ⚙️ Configuración
 
 
 
@@ -162,7 +162,7 @@ El proyecto necesita un archivo `.env` con las credenciales de acceso al correo 
 
 
 
-\### 1. Crear el archivo `.env`
+### 1. Crear el archivo `.env`
 
 
 
@@ -180,7 +180,7 @@ OPENAI\_API\_KEY=tu\_clave\_api\_de\_openai
 
 
 
-\# Modo de respuesta: borrador o enviar
+Modo de respuesta: borrador o enviar
 
 MODO\_RESPUESTA=borrador
 
@@ -196,7 +196,7 @@ No compartas este archivo ni publiques sus credenciales en GitHub.
 
 
 
-\### 2. Configurar Gmail
+### 2. Configurar Gmail
 
 
 
@@ -204,9 +204,9 @@ El programa utiliza los siguientes servidores:
 
 
 
-\- \*\*IMAP:\*\* `imap.gmail.com`, para consultar los correos recibidos.
+- **IMAP:** `imap.gmail.com`, para consultar los correos recibidos.
 
-\- \*\*SMTP:\*\* `smtp.gmail.com`, puerto `465`, para enviar respuestas.
+- **SMTP:** `smtp.gmail.com`, puerto `465`, para enviar respuestas.
 
 
 
@@ -222,13 +222,13 @@ Consulta la documentación oficial de Google:
 
 
 
-\- \[Contraseñas de aplicación](https://support.google.com/accounts/answer/185833)
+- [Contraseñas de aplicación](https://support.google.com/accounts/answer/185833)
 
-\- \[Configuración de Gmail para otros clientes de correo](https://support.google.com/mail/answer/7126229)
+- [Configuración de Gmail para otros clientes de correo](https://support.google.com/mail/answer/7126229)
 
 
 
-\### 3. Configurar los remitentes autorizados
+### 3. Configurar los remitentes autorizados
 
 
 
@@ -242,7 +242,7 @@ Incluye una dirección por línea:
 
 ```text
 
-\# Remitentes autorizados
+Remitentes autorizados
 
 
 
@@ -260,11 +260,11 @@ Las líneas vacías y las que comienzan por `#` se ignoran.
 
 
 
-\*\*Importante:\*\* utiliza direcciones de ejemplo en el repositorio público. Si necesitas mantener una lista privada de remitentes, no publiques sus direcciones personales en GitHub.
+**Importante:** utiliza direcciones de ejemplo en el repositorio público. Si necesitas mantener una lista privada de remitentes, no publiques sus direcciones personales en GitHub.
 
 
 
-\## ▶️ Ejecución
+## ▶️ Ejecución
 
 
 
@@ -288,7 +288,7 @@ La ejecución es puntual: al terminar de procesar los mensajes encontrados, el p
 
 
 
-\## 📝 Modos de respuesta
+## 📝 Modos de respuesta
 
 
 
@@ -296,7 +296,7 @@ El comportamiento se controla mediante la variable `MODO\_RESPUESTA` del archivo
 
 
 
-\### Modo borrador (recomendado)
+### Modo borrador (recomendado)
 
 
 
@@ -320,7 +320,7 @@ Este es el modo predeterminado y el recomendado para empezar a utilizar el proye
 
 
 
-\### Modo envío automático
+### Modo envío automático
 
 
 
@@ -344,7 +344,7 @@ Utiliza este modo únicamente después de comprobar el comportamiento del agente
 
 
 
-\## 🔄 ¿Cómo funciona?
+## 🔄 ¿Cómo funciona?
 
 
 
@@ -352,25 +352,25 @@ El flujo de ejecución es el siguiente:
 
 
 
-1\. Carga la configuración del archivo `.env`.
+1. Carga la configuración del archivo `.env`.
 
-2\. Lee las direcciones autorizadas de `direcciones\_email.txt`.
+2. Lee las direcciones autorizadas de `direcciones\_email.txt`.
 
-3\. Consulta el archivo `procesados.txt` para identificar mensajes tratados anteriormente.
+3. Consulta el archivo `procesados.txt` para identificar mensajes tratados anteriormente.
 
-4\. Se conecta a Gmail mediante IMAP y busca correos no leídos de los remitentes autorizados.
+4. Se conecta a Gmail mediante IMAP y busca correos no leídos de los remitentes autorizados.
 
-5\. Comprueba la dirección exacta del remitente y filtra determinados mensajes automáticos.
+5. Comprueba la dirección exacta del remitente y filtra determinados mensajes automáticos.
 
-6\. Comprueba la autenticación DMARC del mensaje cuando está activada la opción correspondiente.
+6. Comprueba la autenticación DMARC del mensaje cuando está activada la opción correspondiente.
 
-7\. Envía el contenido del correo al modelo de OpenAI a través de LangChain para generar una respuesta estructurada.
+7. Envía el contenido del correo al modelo de OpenAI a través de LangChain para generar una respuesta estructurada.
 
-8\. Si el mensaje requiere intervención humana, no genera una respuesta automática y deja el correo sin leer.
+8. Si el mensaje requiere intervención humana, no genera una respuesta automática y deja el correo sin leer.
 
-9\. Si la respuesta es adecuada, la guarda como borrador o la envía, según la configuración.
+9. Si la respuesta es adecuada, la guarda como borrador o la envía, según la configuración.
 
-10\. Registra el mensaje procesado para evitar repetir innecesariamente el trabajo.
+10. Registra el mensaje procesado para evitar repetir innecesariamente el trabajo.
 
 
 
@@ -378,7 +378,7 @@ El programa utiliza el modelo `gpt-4o-mini` y limita el texto del cuerpo del cor
 
 
 
-\## 📁 Estructura del repositorio
+## 📁 Estructura del repositorio
 
 
 
@@ -388,17 +388,17 @@ agent\_reply\_emails/
 
 │
 
-├── agent\_reply\_mail\_v6.py  # Código principal del agente
+├── agent\_reply\_mail\_v6.py   # Código principal del agente
 
-├── direcciones\_email.txt   # Lista de remitentes autorizados
+├── direcciones\_email.txt      # Lista de remitentes autorizados
 
-├── .gitignore              # Reglas para excluir archivos de Git
+├── .gitignore                  # Reglas para excluir archivos de Git
 
-├── .env                    # Credenciales locales (no publicar)
+├── .env                        # Credenciales locales (no publicar)
 
-├── procesados.txt          # Registro local de mensajes tratados
+├── procesados.txt              # Registro local de mensajes tratados
 
-└── README.md               # Documentación del proyecto
+└── README.md                   # Documentación del proyecto
 
 ```
 
@@ -408,31 +408,31 @@ Los archivos `.env` y `procesados.txt` son archivos locales de configuración y 
 
 
 
-\## 🔐 Seguridad y buenas prácticas
+## 🔐 Seguridad y buenas prácticas
 
 
 
-\- No publiques tu clave API de OpenAI ni las credenciales de Gmail.
+- No publiques tu clave API de OpenAI ni las credenciales de Gmail.
 
-\- No incluyas datos personales o direcciones privadas en archivos públicos.
+- No incluyas datos personales o direcciones privadas en archivos públicos.
 
-\- Mantén `MODO\_RESPUESTA=borrador` hasta haber probado suficientemente el sistema.
+- Mantén `MODO\_RESPUESTA=borrador` hasta haber probado suficientemente el sistema.
 
-\- Revisa las respuestas generadas por la IA antes de enviarlas.
+- Revisa las respuestas generadas por la IA antes de enviarlas.
 
-\- Los filtros de remitentes y autenticación reducen ciertos riesgos, pero no garantizan que todos los mensajes sean legítimos.
+- Los filtros de remitentes y autenticación reducen ciertos riesgos, pero no garantizan que todos los mensajes sean legítimos.
 
-\- Los mensajes que requieren revisión humana pueden contener información sensible. Comprueba que el uso de la API se ajusta a tus necesidades de privacidad.
+- Los mensajes que requieren revisión humana pueden contener información sensible. Comprueba que el uso de la API se ajusta a tus necesidades de privacidad.
 
-\- No ejecutes el programa simultáneamente desde varias instancias sobre la misma cuenta sin revisar antes cómo se gestionan los mensajes procesados.
-
-
-
-\## 🐛 Solución de problemas
+- No ejecutes el programa simultáneamente desde varias instancias sobre la misma cuenta sin revisar antes cómo se gestionan los mensajes procesados.
 
 
 
-\*\*Faltan variables de entorno\*\*
+## 🐛 Solución de problemas
+
+
+
+**Faltan variables de entorno**
 
 
 
@@ -440,7 +440,7 @@ Comprueba que el archivo `.env` está en la ubicación correcta y que contiene `
 
 
 
-\*\*Error de autenticación de Gmail\*\*
+**Error de autenticación de Gmail**
 
 
 
@@ -448,7 +448,7 @@ Comprueba que la verificación en dos pasos está activada, que utilizas una con
 
 
 
-\*\*No se encuentran correos\*\*
+**No se encuentran correos**
 
 
 
@@ -456,7 +456,7 @@ Verifica que el mensaje está sin leer, que el remitente aparece exactamente en 
 
 
 
-\*\*El agente no genera una respuesta\*\*
+**El agente no genera una respuesta**
 
 
 
@@ -464,7 +464,7 @@ El sistema puede decidir que un mensaje requiere revisión humana. Consulta la s
 
 
 
-\*\*Error al llamar a OpenAI\*\*
+**Error al llamar a OpenAI**
 
 
 
@@ -472,7 +472,7 @@ Comprueba la validez de la clave API, los permisos de la cuenta, la disponibilid
 
 
 
-\## 📄 Licencia
+## 📄 Licencia
 
 
 
@@ -480,15 +480,15 @@ Consulta los términos de uso del repositorio antes de reutilizar o distribuir e
 
 
 
-\## 👤 Autor
+## 👤 Autor
 
 
 
-Desarrollado por \[juan1639](https://github.com/juan1639).
+Desarrollado por [juan1639](https://github.com/juan1639).
 
 
 
-Repositorio: \[agent\_reply\_emails](https://github.com/juan1639/agent\_reply\_emails)
+Repositorio: [agent_reply_emails](https://github.com/juan1639/agent\_reply\_emails)
 
 
 

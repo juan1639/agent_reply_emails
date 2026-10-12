@@ -13,6 +13,8 @@ El programa comprueba los correos no leídos, identifica los remitentes autoriza
 Por seguridad, el agente puede guardar las respuestas como borradores en Gmail para que el usuario las revise antes de enviarlas.
 
 
+---
+
 
 ## ✨ Características
 
@@ -35,6 +37,8 @@ Por seguridad, el agente puede guardar las respuestas como borradores en Gmail p
 - **Configuración mediante variables de entorno:** permite mantener las credenciales fuera del código fuente.
 
 
+---
+
 
 ## 🛠️ Tecnologías utilizadas
 
@@ -52,6 +56,8 @@ Por seguridad, el agente puede guardar las respuestas como borradores en Gmail p
 
 - IMAP y SMTP para recibir y gestionar correos de Gmail.
 
+
+---
 
 
 ## 📋 Requisitos previos
@@ -76,6 +82,8 @@ Antes de ejecutar el proyecto necesitarás:
 
 **Importante:** una suscripción a ChatGPT no incluye necesariamente crédito para utilizar la API de OpenAI. El consumo de la API se factura de forma independiente.
 
+
+---
 
 
 ## 🚀 Instalación
@@ -151,6 +159,9 @@ python -m pip install --upgrade pip
 pip install langchain-openai python-dotenv pydantic
 
 ```
+
+
+---
 
 
 
@@ -263,6 +274,8 @@ Las líneas vacías y las que comienzan por `#` se ignoran.
 **Importante:** utiliza direcciones de ejemplo en el repositorio público. Si necesitas mantener una lista privada de remitentes, no publiques sus direcciones personales en GitHub.
 
 
+---
+
 
 ## ▶️ Ejecución
 
@@ -343,6 +356,8 @@ Después de enviar correctamente la respuesta, marca el correo original como le�
 Utiliza este modo únicamente después de comprobar el comportamiento del agente con mensajes reales y de confianza. La revisión humana sigue siendo recomendable.
 
 
+---
+
 
 ## 🔄 ¿Cómo funciona?
 
@@ -377,6 +392,8 @@ El flujo de ejecución es el siguiente:
 El programa utiliza el modelo `gpt-4o-mini` y limita el texto del cuerpo del correo a 4.000 caracteres para controlar la cantidad de contenido enviado al modelo.
 
 
+---
+
 
 ## 📁 Estructura del repositorio
 
@@ -407,6 +424,8 @@ agent\_reply\_emails/
 Los archivos `.env` y `procesados.txt` son archivos locales de configuración y ejecución. El primero contiene credenciales y el segundo almacena los identificadores de los mensajes procesados. No es necesario distribuirlos con el código fuente.
 
 
+---
+
 
 ## 🔐 Seguridad y buenas prácticas
 
@@ -426,6 +445,8 @@ Los archivos `.env` y `procesados.txt` son archivos locales de configuración y 
 
 - No ejecutes el programa simultáneamente desde varias instancias sobre la misma cuenta sin revisar antes cómo se gestionan los mensajes procesados.
 
+
+---
 
 
 ## 🐛 Solución de problemas
@@ -470,6 +491,8 @@ El sistema puede decidir que un mensaje requiere revisión humana. Consulta la s
 
 Comprueba la validez de la clave API, los permisos de la cuenta, la disponibilidad del modelo y la configuración de facturación.
 
+
+---
 
 
 ## 📄 Licencia

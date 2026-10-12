@@ -315,7 +315,7 @@ El comportamiento se controla mediante la variable `MODO_RESPUESTA` del archivo 
 
 ```dotenv
 
-MODO\_RESPUESTA=borrador
+MODO_RESPUESTA=borrador
 
 ```
 
@@ -339,7 +339,7 @@ Este es el modo predeterminado y el recomendado para empezar a utilizar el proye
 
 ```dotenv
 
-MODO\_RESPUESTA=enviar
+MODO_RESPUESTA=enviar
 
 ```
 
@@ -401,13 +401,13 @@ El programa utiliza el modelo `gpt-4o-mini` y limita el texto del cuerpo del cor
 
 ```text
 
-agent\_reply\_emails/
+agent_reply_emails/
 
 │
 
-├── agent\_reply\_mail\_v6.py   # Código principal del agente
+├── agent_reply_mail_v6.py      # Código principal del agente
 
-├── direcciones\_email.txt      # Lista de remitentes autorizados
+├── direcciones_email.txt       # Lista de remitentes autorizados
 
 ├── .gitignore                  # Reglas para excluir archivos de Git
 

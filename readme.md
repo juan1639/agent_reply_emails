@@ -18,7 +18,7 @@ Por seguridad, el agente puede guardar las respuestas como borradores en Gmail p
 
 
 
-- **Filtrado de remitentes:** solo procesa correos procedentes de las direcciones incluidas en `direcciones\_email.txt`.
+- **Filtrado de remitentes:** solo procesa correos procedentes de las direcciones incluidas en `direcciones_email.txt`.
 
 - **Redacción mediante IA:** utiliza OpenAI y LangChain para generar respuestas concisas, amables y profesionales.
 
@@ -92,9 +92,9 @@ Abre una terminal y ejecuta:
 
 ```bash
 
-git clone https://github.com/juan1639/agent\_reply\_emails.git
+git clone https://github.com/juan1639/agent_reply_emails.git
 
-cd agent\_reply\_emails
+cd agent_reply_emails
 
 ```
 
@@ -172,17 +172,17 @@ Crea un archivo llamado `.env` en la raíz del repositorio, junto al script prin
 
 ```dotenv
 
-EMAIL\_USER=tu\_correo@gmail.com
+EMAIL_USER=tu_correo@gmail.com
 
-EMAIL\_PASS=tu\_contrasena\_de\_aplicacion
+EMAIL_PASS=tu_contrasena_de_aplicacion
 
-OPENAI\_API\_KEY=tu\_clave\_api\_de\_openai
+OPENAI_API_KEY=tu_clave_api_de_openai
 
 
 
 Modo de respuesta: borrador o enviar
 
-MODO\_RESPUESTA=borrador
+MODO_RESPUESTA=borrador
 
 ```
 
@@ -214,7 +214,7 @@ Para Gmail, normalmente tendrás que activar la verificación en dos pasos y gen
 
 
 
-Utiliza esa contraseña de aplicación en `EMAIL\_PASS`, no tu contraseña habitual de Gmail.
+Utiliza esa contraseña de aplicación en `EMAIL_PASS`, no tu contraseña habitual de Gmail.
 
 
 
@@ -232,7 +232,7 @@ Consulta la documentación oficial de Google:
 
 
 
-El archivo `direcciones\_email.txt` contiene las direcciones de correo a las que el agente prestará atención.
+El archivo `direcciones_email.txt` contiene las direcciones de correo a las que el agente prestará atención.
 
 
 
@@ -274,7 +274,7 @@ Una vez completada la configuración, ejecuta el programa desde la raíz del rep
 
 ```bash
 
-python agent\_reply\_mail\_v6.py
+python agent_reply_mail_v6.py
 
 ```
 
@@ -292,7 +292,7 @@ La ejecución es puntual: al terminar de procesar los mensajes encontrados, el p
 
 
 
-El comportamiento se controla mediante la variable `MODO\_RESPUESTA` del archivo `.env`.
+El comportamiento se controla mediante la variable `MODO_RESPUESTA` del archivo `.env`.
 
 
 
@@ -354,7 +354,7 @@ El flujo de ejecución es el siguiente:
 
 1. Carga la configuración del archivo `.env`.
 
-2. Lee las direcciones autorizadas de `direcciones\_email.txt`.
+2. Lee las direcciones autorizadas de `direcciones_email.txt`.
 
 3. Consulta el archivo `procesados.txt` para identificar mensajes tratados anteriormente.
 
@@ -416,7 +416,7 @@ Los archivos `.env` y `procesados.txt` son archivos locales de configuración y 
 
 - No incluyas datos personales o direcciones privadas en archivos públicos.
 
-- Mantén `MODO\_RESPUESTA=borrador` hasta haber probado suficientemente el sistema.
+- Mantén `MODO_RESPUESTA=borrador` hasta haber probado suficientemente el sistema.
 
 - Revisa las respuestas generadas por la IA antes de enviarlas.
 
@@ -436,7 +436,7 @@ Los archivos `.env` y `procesados.txt` son archivos locales de configuración y 
 
 
 
-Comprueba que el archivo `.env` está en la ubicación correcta y que contiene `EMAIL\_USER`, `EMAIL\_PASS` y `OPENAI\_API\_KEY`.
+Comprueba que el archivo `.env` está en la ubicación correcta y que contiene `EMAIL_USER`, `EMAIL_PASS` y `OPENAI_API_KEY`.
 
 
 
@@ -452,7 +452,7 @@ Comprueba que la verificación en dos pasos está activada, que utilizas una con
 
 
 
-Verifica que el mensaje está sin leer, que el remitente aparece exactamente en `direcciones\_email.txt` y que el correo cumple los filtros de seguridad del programa.
+Verifica que el mensaje está sin leer, que el remitente aparece exactamente en `direcciones_email.txt` y que el correo cumple los filtros de seguridad del programa.
 
 
 
